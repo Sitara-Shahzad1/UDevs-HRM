@@ -1,0 +1,17 @@
+{
+  "name": "mern-fullstack-app",
+  "version": "1.0.0",
+  "description": "Full-stack MERN application with frontend and backend",
+  "scripts": {
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd Our-Product-Backend && npm run dev",
+    "frontend": "cd U-DEVS-Project && npm run dev",
+    "start": "concurrently \"npm run backend:start\" \"npm run frontend:build\"",
+    "backend:start": "cd Our-Product-Backend && npm start",
+    "frontend:build": "cd U-DEVS-Project && npm run build",
+    "install-all": "npm install && cd Our-Product-Backend && npm install && cd ../U-DEVS-Project && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
